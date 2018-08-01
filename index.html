@@ -50,3 +50,25 @@
     <button>Submit</button>
   </p>
 </form>
+
+<input id="id1" type="number" max="100"  min="100">
+<button onclick="myFunction()">OK</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var txt = "";
+    if (document.getElementById("id1").validity.rangeOverflow) {
+       txt = "Value too large";
+    }
+    else if (document.getElementById("id1").validity.rangeUnderflow) {
+      txt = "Value too small";
+   }
+
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>
